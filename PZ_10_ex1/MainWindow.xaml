@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PZ_10_ex1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="550" Width="750">
+    <Grid Background="Aquamarine" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.046"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="440" VerticalAlignment="Top" Width="725" RenderTransformOrigin="0.5,0.5" Margin="0,21,0,0" Background="White">
+            <InkCanvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </InkCanvas.RenderTransform>
+        </InkCanvas>
+        <Button Content="Очистить" Click="Button_Click"  HorizontalAlignment="Left" Margin="17,469,0,0" VerticalAlignment="Top" Width="104" Height="38"/>
+        <Button x:Name="btn_Close" Content="Закрыть" HorizontalAlignment="Left" Margin="630,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Close_Click" />
+        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="515,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Save_Click" />
     </Grid>
 </Window>
