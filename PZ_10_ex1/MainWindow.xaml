@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PZ_10_ex1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="750">
+        Title="Рисовалка нового уровня" Height="610" Width="760">
     <Grid Background="Aquamarine" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -15,10 +15,10 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="440" VerticalAlignment="Top" Width="725" RenderTransformOrigin="0.5,0.5" Margin="0,21,0,0" Background="White">
+        <InkCanvas x:Name="inkCanvas1"  HorizontalAlignment="Center" Height="440" VerticalAlignment="Top" Width="715" RenderTransformOrigin="0.5,0.5" Margin="0,21,0,0" Background="White">
             <InkCanvas.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
+                    <ScaleTransform ScaleX="1"/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
@@ -26,7 +26,14 @@
             </InkCanvas.RenderTransform>
         </InkCanvas>
         <Button Content="Очистить" Click="Button_Click"  HorizontalAlignment="Left" Margin="17,469,0,0" VerticalAlignment="Top" Width="104" Height="38"/>
-        <Button x:Name="btn_Close" Content="Закрыть" HorizontalAlignment="Left" Margin="630,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Close_Click" />
-        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="515,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Save_Click" />
+        <Button x:Name="btn_Close" Content="Закрыть" HorizontalAlignment="Left" Margin="630,520,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Close_Click" />
+        <Button x:Name="btn_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="515,520,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Save_Click" />
+        <Slider x:Name="sld_RedColor" Background="Red" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="130,468,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
+        <Slider x:Name="sld_GreenColor" Background="Green" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="130,488,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
+        <Slider x:Name="sld_BlueColor" Background="Blue" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="130,508,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
+        <Label x:Name="lbl1" Content="Выбранный цвет" HorizontalAlignment="Left" Margin="403,469,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Select" Content="Выделить" HorizontalAlignment="Left" Margin="515,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Select_Click"/>
+        <Button x:Name="btn_ink" Content="Рисовать" HorizontalAlignment="Left" Margin="630,469,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_Select_ink"/>
+        <Button x:Name="btn_AddText" Content="Добавить текст" HorizontalAlignment="Left" Margin="17,520,0,0" VerticalAlignment="Top" Width="104" Height="38" Click="btn_AddText_Click"/>
     </Grid>
 </Window>
